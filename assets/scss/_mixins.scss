@@ -1,0 +1,14 @@
+/* Scss mixins */
+
+@mixin media($type) {
+    @if $type == 'small' {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $type == 'large' {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    }
+}
